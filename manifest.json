@@ -1,0 +1,15 @@
+{
+  "id": "/gfcuiaba/",
+  "name": "Monitor Cirúrgico · Cuiabá",
+  "short_name": "Monitor CBA",
+  "description": "Acompanhamento cirúrgico em tempo real · Cuiabá, MT",
+  "start_url": "/gfcuiaba/",
+  "scope": "/gfcuiaba/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#2a9fbf",
+  "background_color": "#e8f5ee",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
