@@ -1,11 +1,10 @@
 {
-  "id": "/gfmedical/",
   "lang": "pt-BR",
   "name": "Monitor Cirúrgico · GF Medical",
   "short_name": "Monitor GF",
   "description": "Acompanhamento cirúrgico em tempo real · Consolidado CBA + CGR",
-  "start_url": "/gfmedical/",
-  "scope": "/gfmedical/",
+  "start_url": ".",
+  "scope": "./",
   "display": "standalone",
   "orientation": "any",
   "theme_color": "#0d1f0e",
@@ -21,7 +20,7 @@
       "name": "Nova Cirurgia",
       "short_name": "Nova",
       "description": "Cadastrar novo procedimento cirúrgico",
-      "url": "/gfmedical/",
+      "url": ".",
       "icons": [{ "src": "icon.svg", "sizes": "any" }]
     }
   ]

@@ -1,11 +1,12 @@
-const CACHE = 'monitor-gf-v1';
+const CACHE = 'monitor-gf-v2';
+const BASE = new URL('./', self.location).pathname;
 const LOCAL_ASSETS = [
-  '/gfmedical/',
-  '/gfmedical/index.html',
-  '/gfmedical/styles.css',
-  '/gfmedical/logo.jpg',
-  '/gfmedical/manifest.json',
-  '/gfmedical/icon.svg',
+  BASE,
+  BASE + 'index.html',
+  BASE + 'styles.css',
+  BASE + 'logo.jpg',
+  BASE + 'manifest.json',
+  BASE + 'icon.svg',
 ];
 
 self.addEventListener('install', e => {
@@ -28,7 +29,7 @@ self.addEventListener('fetch', e => {
 
   if (e.request.mode === 'navigate') {
     e.respondWith(
-      fetch(e.request).catch(() => caches.match('/gfmedical/'))
+      fetch(e.request).catch(() => caches.match(BASE))
     );
     return;
   }
@@ -37,7 +38,7 @@ self.addEventListener('fetch', e => {
                   !url.hostname.includes('gstatic') &&
                   !url.hostname.includes('firebaseapp') &&
                   !url.hostname.includes('cdnjs');
-  if (isLocal && url.pathname.startsWith('/gfmedical/')) {
+  if (isLocal && url.pathname.startsWith(BASE)) {
     e.respondWith(
       caches.match(e.request).then(cached => cached || fetch(e.request).then(res => {
         const clone = res.clone();
